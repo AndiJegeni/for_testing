@@ -26,6 +26,13 @@
             <p class="tagline">Full Stack Developer & Creative Thinker</p>
             <p class="subtitle">Crafting digital experiences with precision and passion</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
+
+            <!-- ✨ POOF WORKS BUTTON ✨ -->
+            <div class="poof-wrapper">
+                <button class="poof-button" id="poofBtn" onclick="poofWorks()">
+                    💥 Poof Works 💥
+                </button>
+            </div>
         </div>
         <div class="hero-shapes">
             <div class="shape shape-1"></div>
@@ -190,5 +197,21 @@
             <p>&copy; 2026 Andi Jegeni. Crafted with passion and code.</p>
         </div>
     </footer>
+
+    <!-- ✨ Poof Works JavaScript ✨ -->
+    <script>
+        function poofWorks() {
+            const btn = document.getElementById('poofBtn');
+
+            // Trigger the pop animation
+            btn.classList.add('poof-pop');
+            setTimeout(() => btn.classList.remove('poof-pop'), 400);
+
+            // Show the popup alert
+            setTimeout(() => {
+                alert('💥 POOF! It Works! 💥\n\nYep, this thing is real and it is WORKING! 🚀');
+            }, 200);
+        }
+    </script>
 </body>
 </html>
